@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.acer.jm_pos"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //external libs
+    implementation 'com.android.volley:volley:1.1.0' //http Request libs
+    implementation 'de.hdodenhof:circleimageview:2.2.0' //circle Image
+    implementation 'com.android.support:cardview-v7' //cardView
+    implementation 'net.alhazmy13.MediaPicker:libary:2.4.4' //Image and Gallery Picker
+    implementation 'com.github.vansikrishna:Multimager:1.0.8' //New Image Picker
+    //implementation 'com.squareup.picasso:picasso:2.5.0' //ImageViewer
+
+    configurations.all {
+        exclude group: 'com.android.support', module: 'support-v13'//For camera support
+    }
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'//for gif image
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2' //any chart library
+    implementation 'com.daimajia.androidanimations:library:2.3@aar' //animation
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+}

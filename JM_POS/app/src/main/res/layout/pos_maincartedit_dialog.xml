@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/item_name_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item_name"
+                android:layout_marginTop="20dp"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:gravity="center_horizontal"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#000" />
+
+            <Button
+                android:id="@+id/delete_item"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="DELETE THIS ITEM"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold"
+                android:background="#c0392b"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Item Name"
+                android:visibility="gone"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Insert Name"
+                android:visibility="gone"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Quantity"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/item_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Insert Quantity"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note: Updating or deleting can't be undoned!"
+                android:textColor="#7a7a7a"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

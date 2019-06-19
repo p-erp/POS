@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.acer.jm_pos">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <!-- Splash Screen xml -->
+        <activity
+            android:name=".splash_screen"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <!-- Login xml -->
+        <activity
+            android:name=".login.login"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <!-- register user xml -->
+        <activity
+            android:name=".register_user.register_user"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <!-- Home Sale xml -->
+        <activity
+            android:name=".home_sales.home_sales"
+            android:label="@string/title_activity_home_sales"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Inventory_item (View Item) -->
+        <activity
+            android:name=".inventory.inventory_view_items.inventory_view_items"
+            android:screenOrientation="landscape" />
+
+        <!-- POS Main xml -->
+        <activity
+            android:name=".home_sales.POS_main.POS_main"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <!-- inventory_item (Add Items) -->
+        <activity
+            android:name=".inventory.inventory_add_items.inventory_add_items"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="landscape" />
+
+        <!-- inventory_item (update item) -->
+        <activity
+            android:name=".inventory.inventory_update_items.inventory_update_items"
+            android:screenOrientation="landscape" />
+
+        <!-- inventory_item (Add_category) -->
+        <activity
+            android:name=".inventory.inventory_add_category.inventory_add_category"
+            android:screenOrientation="landscape" />
+
+        <!-- POS_main (Payment_method) -->
+        <activity
+            android:name=".home_sales.POS_main.POS_subPayment.POS_subPayment_cash.POS_subPayment_cash"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <!-- pos_subReceipt -->
+        <activity
+            android:name=".home_sales.POS_main.POS_subReceipt.POS_subReceipt"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <!-- POS_MAIN (payment_bank) -->
+        <activity
+            android:name=".home_sales.POS_main.POS_subPayment.POS_subPayment_bank.pos_subPayment_bank"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <!-- POS_MAIN OPTION -->
+        <activity
+            android:name=".home_sales.POS_main.POS_Option.POS_Option"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <!-- reports_Top Products -->
+        <activity
+            android:name=".reports.top_products.top_products"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <!--- Sales Report -->
+        <activity android:name=".reports.summary_sales.summary_sales"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.Fullscreen"
+            ></activity>
+    </application>
+
+</manifest>
